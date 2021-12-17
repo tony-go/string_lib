@@ -3,6 +3,13 @@
 
 ## API
 
+## Requirement
+
+* cmake
+* https://google.github.io/googletest/
+
+
 ## Links
 
 * https://github.com/openbsd/src/blob/master/include/string.h
+* https://linux.die.net/man/3/string
