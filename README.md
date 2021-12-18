@@ -10,7 +10,12 @@
 
 ## Commands
 
-- Build sources:
+- Run program:
+```bash
+$ make use
+```
+
+- Build sources only:
 ```bash
 $ make build
 ```
