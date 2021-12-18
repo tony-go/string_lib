@@ -10,6 +10,10 @@
 
 ## Commands
 
+- Build sources:
+```bash
+$ make build
+```
 
 ## Links
 
