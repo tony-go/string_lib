@@ -8,7 +8,7 @@ int main(void) {
 
   printf("strlen:\n");
 
-  printf("\zu\n", strlen("yo"));
+  printf("%zu\n", strlen("yo"));
 
   return EXIT_SUCCESS;
 }
