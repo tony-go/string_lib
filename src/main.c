@@ -8,14 +8,14 @@ char* assert_true(int);
 char* assert_false(int);
 
 int main(void) {
-  printf("string test =============\n");
+  printf(" ============= string test =============\n");
 
-  printf("strlen:\n");
+  printf("-> strlen:\n");
   printf("- assert base length %s\n", assert_int(strlen("yo"), 2));
   printf("- assert empty string %s\n", assert_int(strlen(""), 0));
-  printf("- assert null string %s\n", assert_int(strlen(NULL), 2));
+  printf("- assert null string %s\n", assert_int(strlen(NULL), 0));
 
-  printf("strcmp:\n");
+  printf("-> strcmp:\n");
   printf("- assert equal string %s\n", assert_true(strcmp("yo", "yo")));
 
   return EXIT_SUCCESS;
@@ -24,6 +24,7 @@ int main(void) {
 /**
  * 
  * HELPERS
+ * TODO: move in separate file
  * 
  */
 

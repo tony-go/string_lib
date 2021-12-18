@@ -17,6 +17,7 @@ size_t strlen(const char *s) {
 }
 
 int strcmp(const char *s1, const char *s2) {
+  printf("zoo");
   printf("%c, - %c \n", *s1, *s2);
 
   char string_one = *s1;
@@ -27,11 +28,11 @@ int strcmp(const char *s1, const char *s2) {
     if (string_one == string_two) {
       string_one++, string_two++;
     } else {
-      return 0;
+      return 0; // false
     }
   }
 
-  return 1;
+  return 1; // true
 }
 
 
