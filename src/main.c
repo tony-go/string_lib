@@ -7,7 +7,7 @@ char* assert_int(int, int);
 char* assert_true(int);
 char* assert_false(int);
 
-int main(void) {
+void run_tests(void) {
   printf(" ============= string test =============\n");
 
   printf("-> strlen:\n");
@@ -17,7 +17,11 @@ int main(void) {
 
   printf("-> strcmp:\n");
   printf("- assert equal string %s\n", assert_true(strcmp("yo", "yo")));
+}
 
+int main(void) {
+  run_tests();
+  
   return EXIT_SUCCESS;
 }
 
