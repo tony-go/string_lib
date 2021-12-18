@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-size_t strlen(const char *s) {
+size_t str_len(const char *s) {
   if (NULL == s) {
     return 0;
   }
@@ -14,4 +14,12 @@ size_t strlen(const char *s) {
   return length;
 }
 
+int str_cmp(const char* s1, const char* s2) {
+ printf("here \n");
 
+ if (*s1 != 0 && *s2 != 0) {
+  return 1;
+ }
+
+ return 0;
+}
