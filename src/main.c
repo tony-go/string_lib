@@ -16,7 +16,12 @@ void run_tests(void) {
   printf("- assert null string %s\n", assert_int(str_len(NULL), 0));
 
   printf("-> str_cmp:\n");
-  printf("- assert equal string %s\n", assert_true(str_cmp("yo", "yo")));
+  // printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yo"), 0));
+  printf("- assert equal string %s\n", assert_int(str_cmp("yoo", "yo"), 1));
+  // printf("- assert equal string %s\n", assert_int(str_cmp("yooo", "yo"), 2));
+  // printf("- assert equal string %s\n", assert_int(str_cmp("yoooo", "yo"), 3));
+  // printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yoo"), -1));
+  // printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yooo"), -2));
 }
 
 int main(void) {
@@ -36,6 +41,7 @@ char* assert_int(int a, int b) {
   if (a == b) {
     return "pass";
   }
+  printf("--> diff: a: %d, b: %d \n", a, b);
   return "fail";
 }
 
