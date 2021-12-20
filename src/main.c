@@ -18,10 +18,10 @@ void run_tests(void) {
   printf("-> str_cmp:\n");
   printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yo"), 0));
   printf("- assert equal string %s\n", assert_int(str_cmp("yoo", "yo"), 1));
-  printf("- assert equal string %s\n", assert_int(str_cmp("yooo", "yo"), 2));
-  printf("- assert equal string %s\n", assert_int(str_cmp("yoooo", "yo"), 3));
+  printf("- assert equal string %s\n", assert_int(str_cmp("yooo", "yo"), 1));
+  printf("- assert equal string %s\n", assert_int(str_cmp("yoooo", "yo"), 1));
   printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yoo"), -1));
-  printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yooo"), -2));
+  printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yooo"), -1));
 }
 
 int main(void) {

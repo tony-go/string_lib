@@ -13,7 +13,7 @@ size_t str_len(const char *s);
 
 ### str_cmp
 
-Return an integer less than, equal to, or greater than zero if s1 (or the first n bytes thereof) is found, respectively, to be less than, to match, or be greater than s2.
+Return `-1`, `0` or `1` if `s1` (or the first n bytes thereof) is found, respectively, to be less than, to match, or be greater than `s2`.
 
 ```c
 int str_cmp(const char *s1, const char *s2);

@@ -19,30 +19,18 @@ size_t str_len(const char *s)
 
 int str_cmp(const char *s1, const char *s2)
 {
-  int res = 0;
-
   while (*s1 != 0 && *s2 != 0)
   {
     s1++, s2++;
   }
 
-  if (*s1 != 0 && *s2 == 0)
-  {
-    res++;
-    while (*(++s1) != 0)
-    {
-      res++;
-    }
+  if (*s1 == *s2) {
+    return 0;
   }
 
-  if (*s1 == 0 && *s2 != 0)
-  {
-    res--;
-    while (*(++s2) != 0)
-    {
-      res--;
-    }
+  if (*s1 < *s2) {
+    return -1;
   }
 
-  return res;
+  return 1;
 }
