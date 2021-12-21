@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int EOS = '\0';
+
 size_t str_len(const char *s)
 {
   if (NULL == s)
@@ -8,18 +10,14 @@ size_t str_len(const char *s)
   }
 
   size_t length = 0;
-  while (*s != 0)
-  {
-    length++;
-    s++;
-  }
+  while (s[length++] != EOS);
 
-  return length;
+  return length - 1;
 }
 
 int str_cmp(const char *s1, const char *s2)
 {
-  while (*s1 != 0 && *s2 != 0)
+  while (*s1 != EOS && *s2 != EOS)
   {
     if (*s1 == *s2) {
       s1++, s2++;
