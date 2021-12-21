@@ -30,20 +30,21 @@ int str_cmp(const char *s1, const char *s2)
     return -1;
   }
 
-  while (*s1 != EOS && *s2 != EOS)
+  size_t i = 0;
+  while (s1[i] != EOS && s2[i] != EOS)
   {
-    if (*s1 == *s2) {
-      s1++, s2++;
+    if (s1[i] == s2[i]) {
+      i++;
     } else {
       break;
     }
   }
 
-  if (*s1 == *s2) {
+  if (s1[i] == s2[i]) {
     return 0;
   }
 
-  if (*s1 < *s2) {
+  if (s1[i] < s2[i]) {
     return -1;
   }
 
