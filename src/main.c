@@ -22,6 +22,9 @@ void run_tests(void) {
   printf("- assert equal string %s\n", assert_int(str_cmp("yoooo", "yo"), 1));
   printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yoo"), -1));
   printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yooo"), -1));
+  printf("- assert equal string %s\n", assert_int(str_cmp("yo", "yu"), -1));
+  printf("- assert equal string %s\n", assert_int(str_cmp("abc", "bcd"), -1));
+  printf("- assert equal string %s\n", assert_int(str_cmp("za", "ba"), 1));
 }
 
 int main(void) {
