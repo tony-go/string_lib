@@ -17,6 +17,19 @@ size_t str_len(const char *s)
 
 int str_cmp(const char *s1, const char *s2)
 {
+  if (NULL == s1 && NULL == s2)
+  {
+    return 0;
+  }
+  if (NULL == s1)
+  {
+    return 1;
+  }
+  if (NULL == s2)
+  {
+    return -1;
+  }
+
   while (*s1 != EOS && *s2 != EOS)
   {
     if (*s1 == *s2) {
