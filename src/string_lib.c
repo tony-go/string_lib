@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int EOS = '\0';
+#define END_OF_STRING '\0'
 
 size_t str_len(const char *s)
 {
@@ -10,7 +10,7 @@ size_t str_len(const char *s)
   }
 
   size_t length = 0;
-  while (s[length++] != EOS);
+  while (s[length++] != END_OF_STRING);
 
   return length - 1;
 }
@@ -31,7 +31,7 @@ int str_cmp(const char *s1, const char *s2)
   }
 
   size_t i = 0;
-  while (s1[i] != EOS && s2[i] != EOS)
+  while (s1[i] != END_OF_STRING && s2[i] != END_OF_STRING)
   {
     if (s1[i] == s2[i]) {
       i++;

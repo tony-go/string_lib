@@ -28,7 +28,6 @@ void run_tests(void) {
   printf("- compare NULL and string %s\n", assert_int(str_cmp(NULL, "a"), 1));
   printf("- compare string and NULL %s\n", assert_int(str_cmp("a", NULL), -1));
   printf("- compare NULL and NULL %s\n", assert_int(str_cmp(NULL, NULL), 0));
-
 }
 
 int main(void) {
